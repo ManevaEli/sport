@@ -1,63 +1,59 @@
-const form = document.getElementById('logForm');
+const loginForm = document.getElementById('loginForm');
 
-form.addEventListener('submit', function(event){
+loginForm.addEventListener('submit', async function(event) {
+    event.preventDefault(); // On bloque l'envoi classique
 
-    event.preventDefault();
-
-    const username = document.getElementById('nom');
-    const useremail = document.getElementById('email');
-    const userpwd = document.getElementById('mdp');
-
-    const errorNom = document.getElementById('nomError');
-    const errorEmail = document.getElementById('emailError');
-    const errorMdp = document.getElementById('mdpError');
+    const useremail = this.querySelector('input[name="email"]');
+    const userpwd   = this.querySelector('input[name="mdp"]');
+    
+    const generalErrorDiv = document.getElementById('js-error-message');
+    const generalErrorSpan = generalErrorDiv.querySelector('.msg-content');
 
     let isValid = true;
 
-    [errorNom, errorEmail, errorMdp].forEach(span => {
-        span.textContent = "";
-    });
+    generalErrorDiv.style.display = 'none';
+    [useremail, userpwd].forEach(input => input.classList.remove('input-error'));
 
-    [username, useremail, userpwd].forEach(input => {
-        input.classList.remove('input-error');
-    });
-
-    if(username.value.trim().length < 3){
-
-        errorNom.textContent =
-            "Le nom doit contenir au moins 3 caractères.";
-
-        username.classList.add('input-error');
-
-        isValid = false;
-    }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if(!emailRegex.test(useremail.value)){
-
-        errorEmail.textContent =
-            "Veuillez entrer une adresse email valide.";
-
+    if (!emailRegex.test(useremail.value)) {
         useremail.classList.add('input-error');
-
         isValid = false;
     }
 
-    if(userpwd.value.length < 6){
-
-        errorMdp.textContent =
-            "Le mot de passe doit contenir au moins 6 caractères.";
-
+    if (userpwd.value.length < 6) {
         userpwd.classList.add('input-error');
-
         isValid = false;
     }
 
-    if(isValid){
-
-        alert("🎉 Formulaire validé !");
-
+    if (!isValid) {
+        generalErrorSpan.innerText = "Veuillez corriger les erreurs dans le formulaire.";
+        generalErrorDiv.style.display = 'block';
+        return; 
     }
 
+
+    const formData = new FormData(this);
+
+    try {
+        const response = await fetch(this.getAttribute('data-url'), {
+            method: 'POST',
+            body: formData,
+            headers: { 'X-Requested-With': 'XMLHttpRequest' }
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+            window.location.href = result.redirect;
+        } else {
+            generalErrorSpan.innerText = result.message || 'Identifiants incorrects.';
+            generalErrorDiv.style.display = 'block';
+            userpwd.classList.add('input-error');
+        }
+    } catch (error) {
+        console.error('Erreur Fetch:', error);
+        generalErrorSpan.innerText = "Serveur injoignable.";
+        generalErrorDiv.style.display = 'block';
+    }
 });

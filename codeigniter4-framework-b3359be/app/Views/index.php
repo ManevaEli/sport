@@ -648,7 +648,7 @@
 <!-- ║  PAGE 2 — LISTE DES CRÉNEAUX (client/creneaux.php)       ║ -->
 <!-- ╚══════════════════════════════════════════════════════════╝ -->
 
-<section id="page-creneaux" style="padding-top:1rem;">
+<section id"page-creneaux" style="padding-top:1rem;">
 
   <nav class="nav-public">
     <a href="#" class="brand">Fit<span>Space</span></a>
@@ -758,40 +758,47 @@
 <!-- ║  PAGE 3 — CONNEXION (auth/login.php)                     ║ -->
 <!-- ╚══════════════════════════════════════════════════════════╝ -->
 
-<section id="page-login" style="background:var(--surface);">
+<section id="page-login" style="background:var(--surface); min-height:100vh; display:flex; flex-direction:column;">
+
   <nav class="nav-public">
-    <a href="#" class="brand">Fit<span>Space</span></a>
+    <a href="<?= base_url('/') ?>" class="brand">Fit<span>Space</span></a>
   </nav>
+
   <div class="auth-wrapper">
     <div class="auth-card">
-      <div class="auth-logo">Fit<span>Space</span></div>
-      <div class="auth-subtitle">Bienvenue ! Connectez-vous à votre espace.</div>
 
-      <!-- Flashdata erreur CI4 -->
-      <div class="flash-message flash-error">
-        <i class="bi bi-exclamation-circle-fill"></i>
-        Email ou mot de passe incorrect.
+      <div class="auth-logo">Fit<span>Space</span></div>
+      <p class="auth-subtitle">Content de vous revoir !</p>
+
+<form id="loginForm" data-url="<?= base_url('/login') ?>">
+  <?= csrf_field() ?> 
+
+  <div id="js-error-message" class="flash-message flash-error" style="display:none; margin-bottom:15px;">
+     <i class="bi bi-exclamation-circle-fill"></i>
+     <span class="msg-content"></span>
+  </div>
+
+  <div class="form-group mb-3">
+    <label class="form-label">Adresse email</label>
+    <input type="email" name="email" class="form-control" placeholder="exemple@gmail.com" />
+  </div>
+
+  <div class="form-group mb-4">
+    <label class="form-label">Mot de passe</label>
+    <input type="password" name="mdp" class="form-control" placeholder="******" />
+  </div>
+
+  <button type="submit" class="btn-primary-custom">Se connecter</button>
+</form>
+
+      <div class="auth-footer mt-4 text-center">
+        Pas encore de compte ? <a href="<?= base_url('/register') ?>">S'inscrire</a>
       </div>
 
-      <form>
-        <div class="form-group mb-3">
-          <label class="form-label">Adresse email</label>
-          <input type="email" class="form-control" placeholder="votre@email.com" />
-        </div>
-        <div class="form-group mb-4">
-          <label class="form-label">Mot de passe</label>
-          <input type="password" class="form-control" placeholder="••••••••" />
-        </div>
-        <button type="submit" class="btn-primary-custom">Se connecter</button>
-      </form>
-
-      <hr class="auth-divider" />
-      <div class="auth-footer">Pas encore de compte ? <a href="#page-inscription">Créer un compte</a></div>
     </div>
   </div>
+
 </section>
-
-
 <!-- ╔══════════════════════════════════════════════════════════╗ -->
 <!-- ║  PAGE 4 — INSCRIPTION (auth/register.php)                ║ -->
 <!-- ╚══════════════════════════════════════════════════════════╝ -->
@@ -817,7 +824,7 @@
           <label class="form-label">Adresse email</label>
           <input type="email" class="form-control" placeholder="jean.dupont@email.com" id="email" />
           <span style="color:var(--accent);font-size:0.78rem;margin-top:3px;" class="error" id="emailError"></span>
-</div>
+          </div>
       
         <div class="form-group mb-3">
           <label class="form-label">Mot de passe</label>
