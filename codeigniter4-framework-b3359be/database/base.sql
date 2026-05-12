@@ -23,9 +23,9 @@ CREATE TABLE IF NOT EXISTS "ressources" (
 CREATE TABLE IF NOT EXISTS "creneaux" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "ressource_id" INTEGER NOT NULL,
-    "date-debut" DATE NOT NULL,
-    "date-fin" DATE NOT NULL,
-    "places-disponibles" INTEGER NOT NULL,
+    "date_debut" DATE NOT NULL,
+    "date_fin" DATE NOT NULL,
+    "places_disponibles" INTEGER NOT NULL,
     "actif" BOOLEAN NOT NULL DEFAULT 1,
     FOREIGN KEY (ressource_id) REFERENCES ressources(id)
 );
