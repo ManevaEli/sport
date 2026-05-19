@@ -16,7 +16,6 @@
 <!-- ║  PAGE 1 — ACCUEIL PUBLIC (index.php)                     ║ -->
 <!-- ╚══════════════════════════════════════════════════════════╝ -->
 
-<section id="page-accueil">
 
   <!-- NAV -->
   <nav class="nav-public">
@@ -48,7 +47,6 @@
     <div class="stat-item"><div class="num">100%</div><div class="lbl">Gratuit à l'inscription</div></div>
   </div>
 
-</section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
