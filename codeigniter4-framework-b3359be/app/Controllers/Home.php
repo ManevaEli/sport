@@ -90,11 +90,30 @@ public function index()
         return view('auth/register');
     }
 
+<<<<<<< Updated upstream
           public function client()
     {
         return view('client/dashboard');
     }
 
+=======
+    public function creneau_admin()
+    {
+        return view('admin/creneaux');
+    }
+    public function dashboard_admin(){
+        return view('admin/dashboard');
+    }
+    public function edit_creneau()
+    {
+        return view('admin/edit_creneau');
+    }
+    public function reservations_admin()
+    {
+        return view('admin/reservations');
+    }
+    
+>>>>>>> Stashed changes
     public function inscription()
     {
         $nom      = $this->request->getPost('nom');

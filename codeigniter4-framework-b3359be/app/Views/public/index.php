@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FitSpace — Gestionnaire de réservations</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet"/>
-</head>
-
-<body>
-
+<?= $this->extend('layouts/public_layout') ?> <?= $this->section('content') ?>
 <!-- ╔══════════════════════════════════════════════════════════╗ -->
 <!-- ║  PAGE 1 — ACCUEIL PUBLIC (index.php)                     ║ -->
 <!-- ╚══════════════════════════════════════════════════════════╝ -->
@@ -47,10 +34,4 @@
     <div class="stat-item"><div class="num">100%</div><div class="lbl">Gratuit à l'inscription</div></div>
   </div>
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="/js/app.js"></script>
-
-</body>
-</html>
+<?= $this->endSection() ?>
