@@ -2,14 +2,49 @@
 
 namespace App\Controllers;
 
-use App\Models\User; // On importe le modèle ici
+use App\Models\CreneauModel;
+use App\Models\User;
 
 class Home extends BaseController
 {
-    public function index(): string
+
+    public function index()
     {
-        return view('index');
+        $creneauModel = new CreneauModel();
+        $creneauxRaw = $creneauModel->getCreneauxDisponibles();
+        
+        $creneauxFormatte = [];
+        
+        $dateFormatter = new \IntlDateFormatter('fr_FR', \IntlDateFormatter::NONE, \IntlDateFormatter::NONE, null, null, 'E d LLLL');
+        
+        foreach ($creneauxRaw as $c) {
+            $dateDebut = new \DateTime($c['date_debut']);
+            $dateFin = new \DateTime($c['date_fin']);
+            
+            $placesPrises = $c['ressource_capacite'] - $c['places_disponible'];
+            $pourcentageRemplissage = ($c['ressource_capacite'] > 0) ? ($placesPrises / $c['ressource_capacite']) * 100 : 0;
+
+            $creneauxFormatte[] = [
+                'id'                 => $c['id'],
+                'titre'              => $c['ressource_nom'],
+                'type'               => strtolower($c['ressource_type']), 
+                'description'        => $c['ressource_desc'],
+                'date_jour'          => ucfirst($dateFormatter->format($dateDebut)),
+                'heure_debut'        => $dateDebut->format('H\hi'), 
+                'heure_fin'          => $dateFin->format('H\hi'),  
+                'places_restantes'   => $c['places_disponible'],
+                'capacite_totale'    => $c['ressource_capacite'],
+                'jauge_pourcentage'  => $pourcentageRemplissage,
+                'est_complet'        => ($c['places_disponible'] <= 0)
+            ];
+        }
+
+        return view('index', [
+            'creneaux' => $creneauxFormatte,
+            'total'    => count($creneauxFormatte)
+        ]);
     }
+
 
     public function login()
     {
@@ -18,10 +53,8 @@ class Home extends BaseController
 
         $userModel = new User();
         
-        // 1. On cherche l'utilisateur par son email
         $user = $userModel->where('email', $email)->first();
 
-        // 2. On vérifie si l'utilisateur existe ET si le mot de passe est correct
         if ($user && password_verify($password, $user['password'])) {
             
             // On stocke les infos utiles en session
@@ -61,7 +94,6 @@ class Home extends BaseController
 
         $userModel = new User();
 
-        // Vérification si l'email existe déjà (pour éviter l'erreur SQLite unique de l'autre fois)
         if ($userModel->where('email', $email)->first()) {
             return $this->response->setStatusCode(400)->setJSON([
                 'success' => false,
@@ -69,7 +101,6 @@ class Home extends BaseController
             ]);
         }
 
-        // Préparation des données (le modèle s'occupera de hacher le password)
         $userData = [
             'nom'      => $nom,
             'email'    => $email,
@@ -77,7 +108,6 @@ class Home extends BaseController
             'role'     => 'client' // Rôle par défaut sécurisé
         ];
 
-        // Insertion dans la base SQLite
         if ($userModel->insert($userData)) {
             return $this->response->setJSON([
                 'success'  => true,
