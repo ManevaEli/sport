@@ -1,59 +1,105 @@
+// ══════════════════════════════════
+//  FORMULAIRE LOGIN
+// ══════════════════════════════════
 const loginForm = document.getElementById('loginForm');
+if (loginForm) {
+    loginForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
 
-loginForm.addEventListener('submit', async function(event) {
-    event.preventDefault(); // On bloque l'envoi classique
+        const useremail = this.querySelector('input[name="email"]');
+        const userpwd   = this.querySelector('input[name="mdp"]');
+        const generalErrorDiv  = document.getElementById('js-error-message');
+        const generalErrorSpan = generalErrorDiv.querySelector('.msg-content');
 
-    const useremail = this.querySelector('input[name="email"]');
-    const userpwd   = this.querySelector('input[name="mdp"]');
-    
-    const generalErrorDiv = document.getElementById('js-error-message');
-    const generalErrorSpan = generalErrorDiv.querySelector('.msg-content');
+        let isValid = true;
+        generalErrorDiv.style.display = 'none';
+        [useremail, userpwd].forEach(i => i.classList.remove('input-error'));
 
-    let isValid = true;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(useremail.value)) {
+            useremail.classList.add('input-error');
+            isValid = false;
+        }
+        if (userpwd.value.length < 6) {
+            userpwd.classList.add('input-error');
+            isValid = false;
+        }
+        if (!isValid) {
+            generalErrorSpan.innerText = "Veuillez corriger les erreurs.";
+            generalErrorDiv.style.display = 'block';
+            return;
+        }
 
-    generalErrorDiv.style.display = 'none';
-    [useremail, userpwd].forEach(input => input.classList.remove('input-error'));
+        try {
+            const response = await fetch(this.getAttribute('data-url'), {
+                method: 'POST',
+                body: new FormData(this),
+                headers: { 'X-Requested-With': 'XMLHttpRequest' }
+            });
+            const result = await response.json();
 
+            if (response.ok && result.success) {
+                window.location.href = result.redirect;
+            } else {
+                generalErrorSpan.innerText = result.message || 'Identifiants incorrects.';
+                generalErrorDiv.style.display = 'block';
+                userpwd.classList.add('input-error');
+            }
+        } catch (err) {
+            generalErrorSpan.innerText = "Serveur injoignable.";
+            generalErrorDiv.style.display = 'block';
+        }
+    });
+}
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(useremail.value)) {
-        useremail.classList.add('input-error');
-        isValid = false;
-    }
+// ══════════════════════════════════
+//  FORMULAIRE INSCRIPTION
+// ══════════════════════════════════
+const inscriptionForm = document.getElementById('inscriptionForm');
+if (inscriptionForm) {
+    inscriptionForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
 
-    if (userpwd.value.length < 6) {
-        userpwd.classList.add('input-error');
-        isValid = false;
-    }
-
-    if (!isValid) {
-        generalErrorSpan.innerText = "Veuillez corriger les erreurs dans le formulaire.";
-        generalErrorDiv.style.display = 'block';
-        return; 
-    }
-
-
-    const formData = new FormData(this);
-
-    try {
-        const response = await fetch(this.getAttribute('data-url'), {
-            method: 'POST',
-            body: formData,
-            headers: { 'X-Requested-With': 'XMLHttpRequest' }
+        // Reset erreurs
+        ['nomError', 'emailError', 'mdpError'].forEach(id => {
+            document.getElementById(id).innerText = '';
         });
 
-        const result = await response.json();
+        const nom   = document.getElementById('nom').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const mdp   = document.getElementById('mdp').value;
 
-        if (response.ok && result.success) {
-            window.location.href = result.redirect;
-        } else {
-            generalErrorSpan.innerText = result.message || 'Identifiants incorrects.';
-            generalErrorDiv.style.display = 'block';
-            userpwd.classList.add('input-error');
+        let isValid = true;
+
+        if (!nom) {
+            document.getElementById('nomError').innerText = 'Le nom est requis.';
+            isValid = false;
         }
-    } catch (error) {
-        console.error('Erreur Fetch:', error);
-        generalErrorSpan.innerText = "Serveur injoignable.";
-        generalErrorDiv.style.display = 'block';
-    }
-});
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            document.getElementById('emailError').innerText = 'Email invalide.';
+            isValid = false;
+        }
+        if (mdp.length < 6) {
+            document.getElementById('mdpError').innerText = '6 caractères minimum.';
+            isValid = false;
+        }
+        if (!isValid) return;
+
+        try {
+            const response = await fetch(this.getAttribute('data-url'), {
+                method: 'POST',
+                body: new FormData(this),
+                headers: { 'X-Requested-With': 'XMLHttpRequest' }
+            });
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+                window.location.href = result.redirect;
+            } else {
+                document.getElementById('mdpError').innerText = result.message || 'Erreur inscription.';
+            }
+        } catch (err) {
+            document.getElementById('mdpError').innerText = 'Serveur injoignable.';
+        }
+    });
+}
