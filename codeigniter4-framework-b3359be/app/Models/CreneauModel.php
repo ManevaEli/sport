@@ -19,4 +19,12 @@ class CreneauModel extends Model
                     ->orderBy('creneaux.date_debut', 'ASC')
                     ->findAll();
     }
+    public function getAllCreneaux()
+{
+    return $this->select('creneaux.*, ressources.nom as ressource_nom, ressources.type as ressource_type, ressources.description as ressource_desc, ressources.capacite as ressource_capacite')
+                ->join('ressources', 'ressources.id = creneaux.ressource_id')
+                // ->where('creneaux.actif', 1) <-- On commente ou on supprime cette ligne !
+                ->orderBy('creneaux.date_debut', 'ASC')
+                ->findAll();
+}
 }

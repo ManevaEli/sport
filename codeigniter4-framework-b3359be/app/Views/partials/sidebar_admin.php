@@ -24,7 +24,7 @@
     <ul class="sidebar-nav">
 
         <li>
-            <a href="<?= base_url('/admin') ?>" class="<?= url_is('admin') ? 'active' : '' ?>">
+            <a href="<?= base_url('/admin/dashboard') ?>" class="<?= url_is('admin') ? 'active' : '' ?>">
                 <i class="bi bi-speedometer2"></i>
                 Vue d'ensemble
             </a>

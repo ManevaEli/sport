@@ -1,37 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FitSpace — Gestionnaire de réservations</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet"/>
-</head>
-
-<body>
+<?= $this->extend('layouts/admin_layout') ?> <?= $this->section('content') ?>
 <!-- ╔══════════════════════════════════════════════════════════╗ -->
 <!-- ║  PAGE 8 — ADMIN CRÉNEAUX (admin/creneaux.php)            ║ -->
 <!-- ╚══════════════════════════════════════════════════════════╝ -->
 
 <section id="page-admin-creneaux">
   <div class="app-wrapper">
-    <aside class="sidebar">
-      <div class="sidebar-logo">Fit<span>Space</span> <span style="font-size:0.6rem;background:var(--accent);color:#fff;padding:2px 6px;border-radius:4px;vertical-align:middle;">Admin</span></div>
-      <ul class="sidebar-nav" style="margin-top:1rem;">
-        <li><a href="#page-dashboard-admin"><i class="bi bi-speedometer2"></i> Vue d'ensemble</a></li>
-        <li><a href="#page-admin-reservations"><i class="bi bi-bookmark-star-fill"></i> Réservations</a></li>
-        <li><a href="#page-admin-creneaux" class="active"><i class="bi bi-calendar-week-fill"></i> Créneaux</a></li>
-        <li><a href="#page-admin-clients"><i class="bi bi-people-fill"></i> Clients</a></li>
-      </ul>
-      <div class="sidebar-footer">
-        <div class="sidebar-user">
-          <div class="avatar" style="background:#0f3460;">AD</div>
-          <div class="user-info"><div class="name">Admin</div><div class="role">Administrateur</div></div>
-        </div>
-      </div>
-    </aside>
 
     <div class="main-content">
       <div class="topbar">
@@ -84,19 +57,43 @@
         <div class="data-card">
           <div class="data-card-header">
             <h3>Tous les créneaux</h3>
-            <span style="font-size:0.8rem;color:var(--muted);">6 créneaux</span>
+            <span style="font-size:0.8rem;color:var(--muted);"><?=$total?> créneaux</span>
           </div>
           <table class="table-custom">
             <thead>
-              <tr><th>Ressource</th><th>Date début</th><th>Date fin</th><th>Places dispo</th><th>Actif</th><th>Actions</th></tr>
+              <tr>
+                <th>Ressource</th>
+                <th>Date début</th>
+                <th>Date fin</th>
+                <th>Places dispo</th>
+                <th>Actif</th>
+                <th>Actions</th>
+              </tr>
             </thead>
             <tbody>
+            <?php if(!empty($creneaux)): ?>
+              <?php foreach($creneaux as $creneau) : ?>
               <tr>
-                <td class="td-name">Yoga Détente <span class="creneau-type type-cours" style="font-size:0.65rem;margin-left:5px;">Cours</span></td>
-                <td class="td-muted">16 juin · 08h00</td>
-                <td class="td-muted">16 juin · 09h30</td>
-                <td>6 / 10</td>
-                <td><span class="badge-statut s-confirmee" style="font-size:0.68rem;">Oui</span></td>
+                <td class="td-name">
+                  <?= esc($creneau['titre']) ?> 
+                  <span class="creneau-type type-cours" style="font-size:0.65rem;margin-left:5px;">
+                    <?= esc($creneau['type']) ?>
+                  </span>
+                </td>
+                <td class="td-muted"><?= $creneau['date_jour'] ?> · <?= $creneau['heure_debut'] ?></td>
+                <td class="td-muted"><?= $creneau['date_jour'] ?> · <?= $creneau['heure_fin'] ?></td>
+                <td>
+                  <span class="<?= $creneau['est_complet'] ? 'text-danger fw-bold' : '' ?>">
+                    <?= $creneau['places_restantes'] ?>
+                  </span> / <?= $creneau['capacite_totale'] ?>
+                </td>
+                <td>
+                  <?php if($creneau['actif'] == 1): ?>
+                    <span class="badge-statut s-confirmee" style="font-size:0.68rem;">Oui</span>
+                  <?php else: ?>
+                    <span class="badge-statut s-annulee" style="font-size:0.68rem; background-color: var(--danger);">Non</span>
+                  <?php endif; ?>
+                </td>
                 <td>
                   <div class="action-btns">
                     <button class="btn-sm-custom btn-edit"><i class="bi bi-pencil"></i> Éditer</button>
@@ -104,32 +101,14 @@
                   </div>
                 </td>
               </tr>
+              <?php endforeach; ?>
+            <?php else: ?>
               <tr>
-                <td class="td-name">CrossFit Intensif <span class="creneau-type type-cours" style="font-size:0.65rem;margin-left:5px;">Cours</span></td>
-                <td class="td-muted">16 juin · 18h00</td>
-                <td class="td-muted">16 juin · 19h30</td>
-                <td>0 / 15</td>
-                <td><span class="badge-statut s-confirmee" style="font-size:0.68rem;">Oui</span></td>
-                <td>
-                  <div class="action-btns">
-                    <button class="btn-sm-custom btn-edit"><i class="bi bi-pencil"></i> Éditer</button>
-                    <button class="btn-sm-custom btn-del"><i class="bi bi-trash"></i></button>
-                  </div>
+                <td colspan="6" style="text-align: center; color: var(--muted); padding: 2rem;">
+                  Aucun créneau disponible pour le moment.
                 </td>
               </tr>
-              <tr>
-                <td class="td-name">Terrain squash A <span class="creneau-type type-terrain" style="font-size:0.65rem;margin-left:5px;">Terrain</span></td>
-                <td class="td-muted">18 juin · 14h00</td>
-                <td class="td-muted">18 juin · 15h00</td>
-                <td>1 / 2</td>
-                <td><span class="badge-statut s-confirmee" style="font-size:0.68rem;">Oui</span></td>
-                <td>
-                  <div class="action-btns">
-                    <button class="btn-sm-custom btn-edit"><i class="bi bi-pencil"></i> Éditer</button>
-                    <button class="btn-sm-custom btn-del"><i class="bi bi-trash"></i></button>
-                  </div>
-                </td>
-              </tr>
+            <?php endif; ?>
             </tbody>
           </table>
         </div>
@@ -139,9 +118,4 @@
   </div>
 </section>
 
-<!-- scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/js/app.js"></script>
-
-</body>
-</html>
+<?= $this->endSection() ?>

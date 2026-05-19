@@ -1,3 +1,4 @@
+<?= $this->extend('layouts/admin_layout') ?> <?= $this->section('content') ?>
 <!-- ╔══════════════════════════════════════════════════════════╗ -->
 <!-- ║  PAGE — ÉDITION CRÉNEAU (admin/edit_creneau.php)        ║ -->
 <!-- ╚══════════════════════════════════════════════════════════╝ -->
@@ -302,3 +303,4 @@
   </div>
 
 </section>
+<?= $this->endSection() ?>

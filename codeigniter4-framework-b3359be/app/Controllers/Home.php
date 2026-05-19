@@ -48,7 +48,66 @@ public function index()
             'total'    => count($creneauxFormatte)
         ]);
     }
+// Admin Fonctions
+    public function creneau_admin()
+    {
+        $creneauModel = new CreneauModel(); // Ajuste le namespace si besoin
+        $creneauxRaw = $creneauModel->getAllCreneaux();
+        
+        $creneauxFormatte = [];
+        
+        // Correction de l'IntlDateFormatter pour accepter un pattern personnalisé
+        $dateFormatter = new \IntlDateFormatter(
+            'fr_FR', 
+            \IntlDateFormatter::NONE, 
+            \IntlDateFormatter::NONE, 
+            null, 
+            null, 
+            'EEEE d MMMM' // 'EEEE d MMMM' donnera "Lundi 17 Juin"
+        );
+        
+        foreach ($creneauxRaw as $c) {
+            $dateDebut = new \DateTime($c['date_debut']);
+            $dateFin = new \DateTime($c['date_fin']);
+            
+            $placesPrises = $c['ressource_capacite'] - $c['places_disponible'];
+            $pourcentageRemplissage = ($c['ressource_capacite'] > 0) ? ($placesPrises / $c['ressource_capacite']) * 100 : 0;
 
+            $creneauxFormatte[] = [
+                'id'                 => $c['id'],
+                'titre'              => $c['ressource_nom'],
+                'type'               => strtolower($c['ressource_type']), 
+                'description'        => $c['ressource_desc'],
+                'date_jour'          => ucfirst($dateFormatter->format($dateDebut)),
+                'heure_debut'        => $dateDebut->format('H\hi'), 
+                'heure_fin'          => $dateFin->format('H\hi'),  
+                'places_restantes'   => $c['places_disponible'],
+                'capacite_totale'    => $c['ressource_capacite'],
+                'jauge_pourcentage'  => $pourcentageRemplissage,
+                'actif'              => $c['actif'], // On récupère le statut actif
+                'est_complet'        => ($c['places_disponible'] <= 0)
+            ];
+        }
+
+        return view('admin/creneaux', [
+            'creneaux' => $creneauxFormatte,
+            'total'    => count($creneauxFormatte)
+        ]);
+    }
+
+    public function dashboard_admin()
+    {
+        return view('admin/dashboard');
+    }
+
+    public function edit_creneau()
+    {
+        // Logique pour éditer un créneau (afficher le formulaire, traiter la soumission, etc.)
+    }
+    public function reservations_admin()
+    {
+        // Logique pour afficher et gérer les réservations côté admin
+    }
     public function login()
     {
         $email    = $this->request->getPost('email');
@@ -67,9 +126,14 @@ public function index()
                 'isLoggedIn' => true
             ]);
 
+            $redirectUrl= base_url('/client');
+
+            if($user['role'] === 'admin') {
+                $redirectUrl = base_url('/admin/dashboard');
+            }
             return $this->response->setJSON([
                 'success'  => true,
-                'redirect' => base_url('/client') 
+                'redirect' => $redirectUrl
             ]);
         }
         
