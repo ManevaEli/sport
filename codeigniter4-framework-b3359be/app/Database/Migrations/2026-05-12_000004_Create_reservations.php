@@ -23,6 +23,6 @@ class CreateReservation extends Migration
     }
     public function down()
     {
-        $this->forge->dropTable('reservation');
+        $this->forge->dropTable('reservations');
     }
 }

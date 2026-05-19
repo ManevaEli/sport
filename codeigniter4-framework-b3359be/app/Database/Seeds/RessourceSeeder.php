@@ -11,29 +11,34 @@ class RessourceSeeder extends Seeder
         //donnee test
         $data = [
             [
-                'name' => 'Salle de yoga',
+                'nom' => 'Salle de yoga',
                 'description' => 'Salle équipée pour les cours de yoga',
-                'capacity' => 20
+                'type' => 'salle',
+                'capacite' => 20
             ],
             [
-                'name' => 'Salle de fitness', 
+                'nom' => 'Salle de fitness', 
+                'type' => 'salle',
                 'description' => 'Salle avec équipements de musculation', 
-                'capacity' => 30
+                'capacite' => 30
             ],
             [
-                'name' => 'Piscine', 
+                'nom' => 'Piscine', 
+                'type' => 'salle',
                 'description' => 'Piscine olympique 25m', 
-                'capacity' => 50
+                'capacite' => 50
             ],
             [
-                'name' => 'Court de squash', 
+                'nom' => 'Court de squash', 
+                'type' => 'salle',
                 'description' => 'Court de squash climatisé', 
-                'capacity' => 2
+                'capacite' => 2
             ],
             [
-                'name' => 'Salle de spinning', 
+                'nom' => 'Salle de spinning',
+                'type' => 'salle',
                 'description' => 'Salle avec vélos de spinning', 
-                'capacity' => 25
+                'capacite' => 25
             ],
         ];
         $this->db->table('ressources')->insertBatch($data);
