@@ -1,0 +1,1141 @@
+<<<<<<< Updated upstream
+=======
+ERROR - 2026-05-19 06:32:20 --> table ressources has no column named capacity
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute()
+ 6 APPPATH/Database/Seeds/RessourceSeeder.php(39): CodeIgniter\Database\BaseBuilder->insertBatch()
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\RessourceSeeder->run()
+ 8 APPPATH/Database/Seeds/DatabaseSeeder.php(12): CodeIgniter\Database\Seeder->call()
+ 9 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+10 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+11 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+12 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-05-19 06:42:24 --> UNIQUE constraint failed: users.email
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute()
+ 6 APPPATH/Database/Seeds/UserSeeder.php(28): CodeIgniter\Database\BaseBuilder->insertBatch()
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\UserSeeder->run()
+ 8 APPPATH/Database/Seeds/DatabaseSeeder.php(11): CodeIgniter\Database\Seeder->call()
+ 9 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+10 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+11 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+12 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-05-19 06:44:32 --> no such table: reservation
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/Forge.php(663): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Database/Migrations/2026-05-12_000004_Create_reservations.php(26): CodeIgniter\Database\Forge->dropTable()
+ 6 SYSTEMPATH/Database/MigrationRunner.php(1014): App\Database\Migrations\CreateReservation->down()
+ 7 SYSTEMPATH/Database/MigrationRunner.php(323): CodeIgniter\Database\MigrationRunner->migrate()
+ 8 SYSTEMPATH/Commands/Database/MigrateRollback.php(105): CodeIgniter\Database\MigrationRunner->regress()
+ 9 SYSTEMPATH/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRollback::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH/Commands/Database/MigrateRollback.php(104): CodeIgniter\Commands\Database\MigrateRollback->withSignalsBlocked()
+11 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\MigrateRollback->run()
+12 SYSTEMPATH/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH/Commands/Database/MigrateRefresh.php(90): CodeIgniter\CLI\BaseCommand->call()
+14 SYSTEMPATH/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->CodeIgniter\Commands\Database\{closure}()
+15 SYSTEMPATH/Commands/Database/MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+16 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run()
+17 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+18 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+19 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+20 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-05-19 06:44:32 --> UNIQUE constraint failed: users.email
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute()
+ 6 APPPATH/Database/Seeds/UserSeeder.php(28): CodeIgniter\Database\BaseBuilder->insertBatch()
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\UserSeeder->run()
+ 8 APPPATH/Database/Seeds/DatabaseSeeder.php(11): CodeIgniter\Database\Seeder->call()
+ 9 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+10 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+11 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+12 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-05-19 06:54:59 --> no such table: reservation
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/Forge.php(663): CodeIgniter\Database\BaseConnection->query()
+ 5 APPPATH/Database/Migrations/2026-05-12_000004_Create_reservations.php(26): CodeIgniter\Database\Forge->dropTable()
+ 6 SYSTEMPATH/Database/MigrationRunner.php(1014): App\Database\Migrations\CreateReservation->down()
+ 7 SYSTEMPATH/Database/MigrationRunner.php(323): CodeIgniter\Database\MigrationRunner->migrate()
+ 8 SYSTEMPATH/Commands/Database/MigrateRollback.php(105): CodeIgniter\Database\MigrationRunner->regress()
+ 9 SYSTEMPATH/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRollback::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH/Commands/Database/MigrateRollback.php(104): CodeIgniter\Commands\Database\MigrateRollback->withSignalsBlocked()
+11 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\MigrateRollback->run()
+12 SYSTEMPATH/CLI/BaseCommand.php(119): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH/Commands/Database/MigrateRefresh.php(90): CodeIgniter\CLI\BaseCommand->call()
+14 SYSTEMPATH/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->CodeIgniter\Commands\Database\{closure}()
+15 SYSTEMPATH/Commands/Database/MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked()
+16 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run()
+17 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+18 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+19 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+20 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-05-19 06:57:26 --> table ressources has no column named name
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute()
+ 6 APPPATH/Database/Seeds/RessourceSeeder.php(44): CodeIgniter\Database\BaseBuilder->insertBatch()
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\RessourceSeeder->run()
+ 8 APPPATH/Database/Seeds/DatabaseSeeder.php(12): CodeIgniter\Database\Seeder->call()
+ 9 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+10 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+11 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+12 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-05-19 07:01:13 --> table ressources has no column named name
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute()
+ 6 APPPATH/Database/Seeds/RessourceSeeder.php(44): CodeIgniter\Database\BaseBuilder->insertBatch()
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\RessourceSeeder->run()
+ 8 APPPATH/Database/Seeds/DatabaseSeeder.php(12): CodeIgniter\Database\Seeder->call()
+ 9 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+10 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+11 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+12 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-05-19 07:18:03 --> table creneaux has no column named resource_id
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute()
+ 6 APPPATH/Database/Seeds/CreneauSeeder.php(63): CodeIgniter\Database\BaseBuilder->insertBatch()
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\CreneauSeeder->run()
+ 8 APPPATH/Database/Seeds/DatabaseSeeder.php(13): CodeIgniter\Database\Seeder->call()
+ 9 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+10 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+11 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+12 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-05-19 07:19:35 --> table reservations has no column named creneaux_id
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute()
+ 6 APPPATH/Database/Seeds/ReservationSeeder.php(39): CodeIgniter\Database\BaseBuilder->insertBatch()
+ 7 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\ReservationSeeder->run()
+ 8 APPPATH/Database/Seeds/DatabaseSeeder.php(14): CodeIgniter\Database\Seeder->call()
+ 9 SYSTEMPATH/Database/Seeder.php(155): App\Database\Seeds\DatabaseSeeder->run()
+10 SYSTEMPATH/Commands/Database/Seed.php(79): CodeIgniter\Database\Seeder->call()
+11 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Database\Seed->run()
+12 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+13 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+15 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+CRITICAL - 2026-05-19 07:49:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "calendar_view.php"
+[Method: GET, Route: calendar]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Calendar.php(12): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 08:07:28 --> ErrorException: Undefined variable $total
+[Method: GET, Route: /]
+in APPPATH/Views/index.php on line 666.
+ 1 APPPATH/Views/index.php(666): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/maneva/S4-Maneva/sport/codeigniter4-framework-b3359be/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 08:07:29 --> ErrorException: Undefined variable $total
+[Method: GET, Route: /]
+in APPPATH/Views/index.php on line 666.
+ 1 APPPATH/Views/index.php(666): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/maneva/S4-Maneva/sport/codeigniter4-framework-b3359be/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 08:07:39 --> ErrorException: Undefined variable $total
+[Method: GET, Route: /]
+in APPPATH/Views/index.php on line 666.
+ 1 APPPATH/Views/index.php(666): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/maneva/S4-Maneva/sport/codeigniter4-framework-b3359be/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 08:09:01 --> ErrorException: Undefined variable $total
+[Method: GET, Route: /]
+in APPPATH/Views/index.php on line 666.
+ 1 APPPATH/Views/index.php(666): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/maneva/S4-Maneva/sport/codeigniter4-framework-b3359be/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 08:09:05 --> ErrorException: Undefined variable $total
+[Method: GET, Route: /]
+in APPPATH/Views/index.php on line 666.
+ 1 APPPATH/Views/index.php(666): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/maneva/S4-Maneva/sport/codeigniter4-framework-b3359be/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(9): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 08:15:37 --> ErrorException: Undefined variable $total
+[Method: GET, Route: /]
+in APPPATH/Views/index.php on line 666.
+ 1 APPPATH/Views/index.php(666): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/maneva/S4-Maneva/sport/codeigniter4-framework-b3359be/app/Views/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(11): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 08:20:16 --> Error: Class "App\Controllers\CreneauModel" not found
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 08:20:17 --> Error: Class "App\Controllers\CreneauModel" not found
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 08:22:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "accueil_view.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(42): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 08:22:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "accueil_view.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(42): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 10:41:39 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(42): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 10:43:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(42): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 10:46:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "puindex.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(42): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 10:47:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "puindex.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(42): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 10:47:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "puindex.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(42): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 10:47:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "puindex.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(42): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 10:47:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "puindex.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(42): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 10:47:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "puindex.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(42): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+<<<<<<< Updated upstream
+CRITICAL - 2026-05-19 11:25:58 --> ErrorException: Undefined variable $total
+[Method: GET, Route: creneaux]
+in APPPATH/Views/client/creneaux.php on line 20.
+ 1 APPPATH/Views/client/creneaux.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/maneva/Musique/sport/codeigniter4-framework-b3359be/app/Views/client/creneaux.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(98): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->creneaux()
+=======
+CRITICAL - 2026-05-19 11:19:33 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: /]
+in SYSTEMPATH/View/View.php on line 444.
+ 1 APPPATH/Views/public/index.php(37): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/nomena/ITU/s4/S4-design/sport/codeigniter4-framework-b3359be/app/Views/public/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(42): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 11:19:34 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: /]
+in SYSTEMPATH/View/View.php on line 444.
+ 1 APPPATH/Views/public/index.php(37): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/nomena/ITU/s4/S4-design/sport/codeigniter4-framework-b3359be/app/Views/public/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(42): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 11:19:35 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: /]
+in SYSTEMPATH/View/View.php on line 444.
+ 1 APPPATH/Views/public/index.php(37): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/nomena/ITU/s4/S4-design/sport/codeigniter4-framework-b3359be/app/Views/public/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(42): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 11:19:48 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: /]
+in SYSTEMPATH/View/View.php on line 444.
+ 1 APPPATH/Views/public/index.php(37): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/nomena/ITU/s4/S4-design/sport/codeigniter4-framework-b3359be/app/Views/public/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(42): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 11:19:49 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: /]
+in SYSTEMPATH/View/View.php on line 444.
+ 1 APPPATH/Views/public/index.php(37): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/nomena/ITU/s4/S4-design/sport/codeigniter4-framework-b3359be/app/Views/public/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(42): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 11:19:50 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: /]
+in SYSTEMPATH/View/View.php on line 444.
+ 1 APPPATH/Views/public/index.php(37): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/nomena/ITU/s4/S4-design/sport/codeigniter4-framework-b3359be/app/Views/public/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(42): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 11:19:50 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: /]
+in SYSTEMPATH/View/View.php on line 444.
+ 1 APPPATH/Views/public/index.php(37): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/nomena/ITU/s4/S4-design/sport/codeigniter4-framework-b3359be/app/Views/public/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(42): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 11:19:50 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: /]
+in SYSTEMPATH/View/View.php on line 444.
+ 1 APPPATH/Views/public/index.php(37): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/nomena/ITU/s4/S4-design/sport/codeigniter4-framework-b3359be/app/Views/public/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(42): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 11:19:50 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: /]
+in SYSTEMPATH/View/View.php on line 444.
+ 1 APPPATH/Views/public/index.php(37): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/nomena/ITU/s4/S4-design/sport/codeigniter4-framework-b3359be/app/Views/public/index.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(42): view()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->index()
+>>>>>>> Stashed changes
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+<<<<<<< Updated upstream
+CRITICAL - 2026-05-19 11:30:51 --> ErrorException: Cannot redeclare App\Controllers\Home::creneaux()
+[Method: GET, Route: creneaux]
+in APPPATH/Controllers/Home.php on line 98.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-19 11:30:52 --> ErrorException: Cannot redeclare App\Controllers\Home::creneaux()
+[Method: GET, Route: creneaux]
+in APPPATH/Controllers/Home.php on line 98.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+CRITICAL - 2026-05-19 12:07:15 --> Error: Class "App\Controllers\ReservationModel" not found
+[Method: GET, Route: reservations]
+in APPPATH/Controllers/Home.php on line 193.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:09:14 --> Error: Class "App\Controllers\ReservationModel" not found
+[Method: GET, Route: reservations]
+in APPPATH/Controllers/Home.php on line 193.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:09:14 --> Error: Class "App\Controllers\ReservationModel" not found
+[Method: GET, Route: reservations]
+in APPPATH/Controllers/Home.php on line 193.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:09:15 --> Error: Class "App\Controllers\ReservationModel" not found
+[Method: GET, Route: reservations]
+in APPPATH/Controllers/Home.php on line 193.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:11:26 --> Error: Class "App\Controllers\ReservationModel" not found
+[Method: GET, Route: reservations]
+in APPPATH/Controllers/Home.php on line 193.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:11:27 --> Error: Class "App\Controllers\ReservationModel" not found
+[Method: GET, Route: reservations]
+in APPPATH/Controllers/Home.php on line 193.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:11:27 --> Error: Class "App\Controllers\ReservationModel" not found
+[Method: GET, Route: reservations]
+in APPPATH/Controllers/Home.php on line 193.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-19 12:11:41 --> Unable to prepare statement: 1, no such column: creneaux.ressource_nom
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Models/ReservationModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Home.php(194): App\Models\ReservationModel->getReservationsByUserId()
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:11:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such column: creneaux.ressource_nom
+[Method: GET, Route: reservations]
+in SYSTEMPATH/Database/BaseConnection.php on line 865.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Models/ReservationModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH/Controllers/Home.php(194): App\Models\ReservationModel->getReservationsByUserId()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:11:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such column: creneaux.ressource_nom
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 174.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Models/ReservationModel.php(30): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH/Controllers/Home.php(194): App\Models\ReservationModel->getReservationsByUserId()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:11:41 --> [Caused by] Exception: Unable to prepare statement: 1, no such column: creneaux.ressource_nom
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Models/ReservationModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Home.php(194): App\Models\ReservationModel->getReservationsByUserId()
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-05-19 12:11:42 --> Unable to prepare statement: 1, no such column: creneaux.ressource_nom
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Models/ReservationModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Home.php(194): App\Models\ReservationModel->getReservationsByUserId()
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:11:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such column: creneaux.ressource_nom
+[Method: GET, Route: reservations]
+in SYSTEMPATH/Database/BaseConnection.php on line 865.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Models/ReservationModel.php(30): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH/Controllers/Home.php(194): App\Models\ReservationModel->getReservationsByUserId()
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:11:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such column: creneaux.ressource_nom
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 174.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Models/ReservationModel.php(30): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH/Controllers/Home.php(194): App\Models\ReservationModel->getReservationsByUserId()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:11:42 --> [Caused by] Exception: Unable to prepare statement: 1, no such column: creneaux.ressource_nom
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Models/ReservationModel.php(30): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Home.php(194): App\Models\ReservationModel->getReservationsByUserId()
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->mesReservations()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:34:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "client/calendar.php"
+[Method: GET, Route: calendar]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Calendar.php(16): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:37:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "client/sidebar.php"
+[Method: GET, Route: calendar]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Views/client/calendar.php(48): view()
+ 4 SYSTEMPATH/View/View.php(240): include('/home/maneva/Musique/sport/codeigniter4-framework-b3359be/app/Views/client/calendar.php')
+ 5 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Calendar.php(16): view()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:37:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "client/sidebar.php"
+[Method: GET, Route: calendar]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Views/client/calendar.php(48): view()
+ 4 SYSTEMPATH/View/View.php(240): include('/home/maneva/Musique/sport/codeigniter4-framework-b3359be/app/Views/client/calendar.php')
+ 5 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Calendar.php(16): view()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:43:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "client/sidebar.php"
+[Method: GET, Route: calendar]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Views/client/calendar.php(48): view()
+ 4 SYSTEMPATH/View/View.php(240): include('/home/maneva/Musique/sport/codeigniter4-framework-b3359be/app/Views/client/calendar.php')
+ 5 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 7 APPPATH/Controllers/Calendar.php(16): view()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:48:54 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:51:49 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:32 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:38 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:39 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:39 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:39 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:40 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:40 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:40 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:41 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:41 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:41 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:42 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:42 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:42 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:42 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:42 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:42 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:43 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:43 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:43 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:43 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:43 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:44 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:44 --> ErrorException: Undefined array key "ressource_nom"
+[Method: GET, Route: calendar/loadEvents]
+in APPPATH/Controllers/Calendar.php on line 47.
+ 1 APPPATH/Controllers/Calendar.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Calendar->loadEvents()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+=======
+CRITICAL - 2026-05-19 11:50:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/dashboard.php"
+[Method: GET, Route: admin/dashboard]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(109): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->dashboard_admin()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 11:50:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/dashboard.php"
+[Method: GET, Route: admin/dashboard]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(109): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->dashboard_admin()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:03 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\CreneauModel::getAllDisponibles
+[Method: GET, Route: admin/creneaux]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/Home.php(54): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->creneau_admin()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:07 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\CreneauModel::getAllDisponibles
+[Method: GET, Route: admin/creneaux]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/Home.php(54): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->creneau_admin()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:09 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\CreneauModel::getAllDisponibles
+[Method: GET, Route: admin/creneaux]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/Home.php(54): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->creneau_admin()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:10 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\CreneauModel::getAllDisponibles
+[Method: GET, Route: admin/creneaux]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/Home.php(54): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->creneau_admin()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:10 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\CreneauModel::getAllDisponibles
+[Method: GET, Route: admin/creneaux]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/Home.php(54): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->creneau_admin()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-19 12:53:10 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\CreneauModel::getAllDisponibles
+[Method: GET, Route: admin/creneaux]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/Home.php(54): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Home->creneau_admin()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
