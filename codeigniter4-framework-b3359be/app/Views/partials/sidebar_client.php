@@ -11,7 +11,7 @@
     <ul class="sidebar-nav">
 
         <li>
-            <a href="<?= base_url('/dashboard') ?>" class="<?= url_is('dashboard') ? 'active' : '' ?>">
+            <a href="<?= base_url('/client') ?>" class="<?= url_is('dashboard') ? 'active' : '' ?>">
                 <i class="bi bi-grid-1x2-fill"></i>
                 Tableau de bord
             </a>
@@ -25,7 +25,7 @@
         </li>
 
         <li>
-            <a href="<?= base_url('/mes-reservations') ?>" class="<?= url_is('mes-reservations') ? 'active' : '' ?>">
+        <a href="<?= base_url('/reservations') ?>" class="<?= url_is('reservations') ? 'active' : '' ?>">
                 <i class="bi bi-bookmark-check-fill"></i>
                 Mes réservations
             </a>

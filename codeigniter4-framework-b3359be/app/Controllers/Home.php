@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\CreneauModel;
 use App\Models\User;
+use App\Models\ReservationModel;
 
 class Home extends BaseController
 {
@@ -90,30 +91,11 @@ public function index()
         return view('auth/register');
     }
 
-<<<<<<< Updated upstream
           public function client()
     {
         return view('client/dashboard');
     }
 
-=======
-    public function creneau_admin()
-    {
-        return view('admin/creneaux');
-    }
-    public function dashboard_admin(){
-        return view('admin/dashboard');
-    }
-    public function edit_creneau()
-    {
-        return view('admin/edit_creneau');
-    }
-    public function reservations_admin()
-    {
-        return view('admin/reservations');
-    }
-    
->>>>>>> Stashed changes
     public function inscription()
     {
         $nom      = $this->request->getPost('nom');
@@ -157,4 +139,122 @@ public function index()
             'message' => 'Une erreur est survenue lors de l\'inscription.'
         ]);
     }
+
+public function reserver($id)
+{
+    if (!session()->get('isLoggedIn')) {
+        return redirect()->to(base_url('/log'))->with('error', 'Vous devez être connecté pour réserver.');
+    }
+
+    $userId = session()->get('user_id');
+    $creneauModel = new CreneauModel();
+    $reservationModel = new ReservationModel();
+
+    $creneau = $creneauModel->find($id);
+    if (!$creneau || $creneau['places_disponible'] <= 0) {
+        return redirect()->to(base_url('/creneaux'))->with('error', 'Créneau indisponible ou complet.');
+    }
+
+    $dejaReserve = $reservationModel->where('user_id', $userId)->where('creneau_id', $id)->first();
+    if ($dejaReserve) {
+        return redirect()->to(base_url('/creneaux'))->with('error', 'Vous avez déjà réservé ce créneau !');
+    }
+
+    $db = \Config\Database::connect();
+    $db->transStart();
+
+    $reservationModel->insert([
+        'user_id'    => $userId,
+        'creneau_id' => $id,
+        'status'     => 'en attente',
+        'created_at' => date('Y-m-d H:i:s')
+    ]);
+
+    $creneauModel->update($id, [
+        'places_disponible' => $creneau['places_disponible'] - 1
+    ]);
+
+    $db->transComplete();
+
+    if ($db->transStatus() === false) {
+        return redirect()->to(base_url('/creneaux'))->with('error', 'Erreur lors de la réservation.');
+    }
+
+    return redirect()->to(base_url('/creneaux'))->with('success', 'Réservation enregistrée avec succès !');
+}
+
+public function mesReservations()
+    {
+        if (!session()->get('isLoggedIn')) {
+            return redirect()->to(base_url('/log'))->with('error', 'Veuillez vous connecter.');
+        }
+
+        $userId = session()->get('user_id');
+        $reservationModel = new ReservationModel();
+        $reservationsRaw = $reservationModel->getReservationsByUserId($userId);
+
+        $reservationsFormattees = [];
+        $dateFormatter = new \IntlDateFormatter('fr_FR', \IntlDateFormatter::LONG, \IntlDateFormatter::NONE, null, null, 'd MMMM yyyy');
+
+        foreach ($reservationsRaw as $res) {
+            $dateDebut = new \DateTime($res['date_debut']);
+            $dateFin   = new \DateTime($res['date_fin']);
+
+            $reservationsFormattees[] = [
+                'id'      => $res['reservation_id'],
+                'nom'     => $res['ressource_nom'],
+                'type'    => strtolower($res['ressource_type']),
+                'date'    => $dateFormatter->format($dateDebut),
+                'horaire' => $dateDebut->format('H\hi') . ' – ' . $dateFin->format('H\hi'),
+                'status'  => $res['status']
+            ];
+        }
+
+        return view('client/reservations', [
+            'reservations' => $reservationsFormattees
+        ]);
+    }
+
+    public function annulerReservation($id)
+{
+    if (!session()->get('isLoggedIn')) {
+        return redirect()->to(base_url('/log'))->with('error', 'Veuillez vous connecter.');
+    }
+
+    $userId = session()->get('user_id');
+    $reservationModel = new ReservationModel();
+    $creneauModel = new CreneauModel();
+
+    $reservation = $reservationModel->where('id', $id)->where('user_id', $userId)->first();
+
+    if (!$reservation) {
+        return redirect()->to(base_url('/reservations'))->with('error', 'Réservation introuvable ou action non autorisée.');
+    }
+
+    if ($reservation['status'] === 'annulee' || $reservation['status'] === 'annulé') {
+        return redirect()->to(base_url('/reservations'))->with('error', 'Cette réservation est déjà annulée.');
+    }
+
+    $db = \Config\Database::connect();
+    $db->transStart();
+
+    $reservationModel->update($id, ['status' => 'annulé']);
+    
+    //$reservationModel->delete($id);
+
+    $creneau = $creneauModel->find($reservation['creneau_id']);
+    if ($creneau) {
+        $creneauModel->update($reservation['creneau_id'], [
+            'places_disponible' => $creneau['places_disponible'] + 1
+        ]);
+    }
+
+    $db->transComplete();
+
+    if ($db->transStatus() === false) {
+        return redirect()->to(base_url('/reservations'))->with('error', 'Une erreur est survenue lors de l\'annulation.');
+    }
+
+    return redirect()->to(base_url('/reservations'))->with('success', 'Votre réservation a bien été annulée. Une place a été libérée !');
+}
 }

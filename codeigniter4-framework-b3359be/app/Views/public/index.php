@@ -8,7 +8,7 @@
   <nav class="nav-public">
     <a href="#" class="brand">Fit<span>Space</span></a>
     <div class="nav-links">
-      <a href="#">Nos créneaux</a>
+      <a href=" <a href="<?= base_url('/creneaux') ?>">Nos créneaux</a>
       <a href="#">Tarifs</a>
       <a href="<?= base_url('/log') ?>">Connexion</a>
       <a href="<?= base_url('/inscription') ?>" class="btn-nav-primary">S'inscrire</a>
@@ -21,7 +21,7 @@
     <h1>Votre espace bien-être,<br><em>réservé en 30 secondes.</em></h1>
     <p>Cours collectifs, salles et terrains disponibles 7j/7. Créez un compte gratuit et réservez votre prochain créneau.</p>
     <div class="hero-ctas">
-      <a href="#page-creneaux" class="btn-hero btn-hero-primary">Voir les créneaux disponibles</a>
+      <a href="<?= base_url('/creneaux') ?>" class="btn-hero btn-hero-primary">Voir les créneaux disponibles</a>
       <a href="<?= base_url('/inscription') ?>" class="btn-hero btn-hero-outline">Créer mon compte</a>
     </div>
   </div>
