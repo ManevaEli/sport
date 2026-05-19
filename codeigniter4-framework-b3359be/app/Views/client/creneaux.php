@@ -2,21 +2,29 @@
 <!-- ║  PAGE 2 — LISTE DES CRÉNEAUX (client/creneaux.php)       ║ -->
 <!-- ╚══════════════════════════════════════════════════════════╝ -->
 
+<?= $this->extend('layouts/client_layout') ?> <?= $this->section('content') ?>
 
 <section id="page-creneaux" style="padding-top:1rem;">
 
   <nav class="nav-public">
-    <a href="#" class="brand">Fit<span>Space</span></a>
+    <a href="<?= base_url('/') ?>" class="brand">Fit<span>Space</span></a>
     <div class="nav-links">
-      <a href="#page-dashboard-client">Mon espace</a>
-      <a href="#">Déconnexion</a>
+      <?php if (session()->get('isLoggedIn')): ?>
+        <span class="navbar-text me-3" style="color: var(--primary); font-weight: 500;">
+          <i class="bi bi-person-circle"></i> <?= esc(session()->get('user_nom')) ?>
+        </span>
+        <a href="<?= base_url('/client') ?>">Mon espace</a>
+        <a href="<?= base_url('/logout') ?>" style="color: var(--accent);">Déconnexion</a>
+      <?php else: ?>
+        <a href="<?= base_url('/log') ?>">Connexion</a>
+      </nav>
+      <?php endif; ?>
     </div>
   </nav>
 
   <div class="page-section">
     <div class="section-head">
       <h2>Créneaux disponibles</h2>
-      <!-- Nombre de créneaux dynamique -->
       <span class="count"><?= $total ?> créneau<?= $total > 1 ? 's' : '' ?> trouvé<?= $total > 1 ? 's' : '' ?></span>
     </div>
 
@@ -34,11 +42,9 @@
       <?php if (!empty($creneaux)): ?>
         <?php foreach ($creneaux as $creneau): ?>
           
-          <!-- Carte Créneau (Ajout de la classe 'full' si complet) -->
           <div class="creneau-card <?= $creneau['est_complet'] ? 'full' : '' ?>">
             
             <div class="creneau-header">
-              <!-- Type de créneau adaptatif avec sa classe CSS et icône -->
               <?php if ($creneau['type'] === 'cours'): ?>
                 <span class="creneau-type type-cours"><i class="bi bi-people-fill"></i> Cours</span>
               <?php elseif ($creneau['type'] === 'salle'): ?>
@@ -54,11 +60,10 @@
             
             <div class="creneau-meta">
               <div class="meta-row"><i class="bi bi-clock"></i> <?= $creneau['heure_debut'] ?> — <?= $creneau['heure_fin'] ?></div>
-              <div class="meta-row"><i class="bi bi-geo-alt"></i> <?= esc($creneau['description']) ?></div>
+              <div class="meta-row"><i class="bi bi-geo-alt"></i> <?= esc($creneau['description'] ?? 'Aucune description') ?></div>
             </div>
             
             <div>
-              <!-- Barre de progression calculée selon la capacité SQLite -->
               <div class="places-bar">
                 <div class="places-fill" style="width:<?= $creneau['jauge_pourcentage'] ?>%; <?= $creneau['est_complet'] ? 'background:var(--muted);' : '' ?>"></div>
               </div>
@@ -72,7 +77,6 @@
               </div>
             </div>
 
-            <!-- Bouton d'action variable selon dispo -->
             <?php if ($creneau['est_complet']): ?>
               <button class="btn-reserver disabled" disabled>Complet</button>
             <?php else: ?>
@@ -89,5 +93,7 @@
     </div>
   </div>
 
-  <div class="footer-public">FitSpace &copy; 2025 — Projet CodeIgniter 4 · Tous droits <span>réservés</span></div>
+  <div class="footer-public">FitSpace &copy; 2026 — Projet CodeIgniter 4 · Tous droits <span>réservés</span></div>
 </section>
+
+<?= $this->endSection() ?>

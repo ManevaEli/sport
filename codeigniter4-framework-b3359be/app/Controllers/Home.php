@@ -7,14 +7,17 @@ use App\Models\User;
 
 class Home extends BaseController
 {
+public function index()
+    {
+        return view('public/index');
+    }
 
-    public function index()
+    public function creneaux()
     {
         $creneauModel = new CreneauModel();
         $creneauxRaw = $creneauModel->getCreneauxDisponibles();
         
         $creneauxFormatte = [];
-        
         $dateFormatter = new \IntlDateFormatter('fr_FR', \IntlDateFormatter::NONE, \IntlDateFormatter::NONE, null, null, 'E d LLLL');
         
         foreach ($creneauxRaw as $c) {
@@ -39,12 +42,11 @@ class Home extends BaseController
             ];
         }
 
-        return view('public/index', [
+        return view('client/creneaux', [
             'creneaux' => $creneauxFormatte,
             'total'    => count($creneauxFormatte)
         ]);
     }
-
 
     public function login()
     {
@@ -57,7 +59,6 @@ class Home extends BaseController
 
         if ($user && password_verify($password, $user['password'])) {
             
-            // On stocke les infos utiles en session
             session()->set([
                 'user_id'    => $user['id'],
                 'user_nom'   => $user['nom'],
@@ -67,7 +68,7 @@ class Home extends BaseController
 
             return $this->response->setJSON([
                 'success'  => true,
-                'redirect' => base_url('/dashboard') // Adapte selon ta route
+                'redirect' => base_url('/client') 
             ]);
         }
         
@@ -87,6 +88,11 @@ class Home extends BaseController
        public function insc()
     {
         return view('auth/register');
+    }
+
+          public function client()
+    {
+        return view('client/dashboard');
     }
 
     public function inscription()

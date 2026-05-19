@@ -28,7 +28,7 @@
       <div class="auth-logo">Fit<span>Space</span></div>
       <p class="auth-subtitle">Content de vous revoir !</p>
 
-<form id="loginForm" data-url="<?= base_url('/login') ?>">
+<form id="loginForm" data-url="<?= base_url('/login') ?>" method="post">
   <?= csrf_field() ?> 
 
   <div id="js-error-message" class="flash-message flash-error" style="display:none; margin-bottom:15px;">
