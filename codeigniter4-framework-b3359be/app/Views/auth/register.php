@@ -48,7 +48,7 @@
       </form>
 
       <hr class="auth-divider" />
-      <div class="auth-footer">Déjà inscrit ? <a href="#page-login">Se connecter</a></div>
+      <div class="auth-footer">Déjà inscrit ? <a href="<?= base_url('/log') ?>">Se connecter</a></div>
     </div>
   </div>
 </section>

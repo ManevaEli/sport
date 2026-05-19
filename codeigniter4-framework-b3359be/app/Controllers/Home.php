@@ -321,4 +321,13 @@ public function mesReservations()
 
     return redirect()->to(base_url('/reservations'))->with('success', 'Votre réservation a bien été annulée. Une place a été libérée !');
 }
+
+
+public function logout()
+{
+    session()->destroy();
+
+    return redirect()->to('/log')->with('success', 'Vous avez été déconnecté avec succès.');
 }
+}
+

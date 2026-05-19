@@ -59,11 +59,10 @@
                 <div class="name">Jean Dupont</div>
                 <div class="role">Client</div>
             </div>
-
-            <a 
-                href="<?= base_url('/logout') ?>"
-                style="margin-left:auto;color:rgba(255,255,255,0.3);font-size:1.1rem;"
-            >
+            <a href="<?= base_url('/logout') ?>" class="nav-link text-danger">
+    <i class="bi bi-box-arrow-right"></i>
+    <span>Déconnexion</span>
+</a>
                 <i class="bi bi-box-arrow-right"></i>
             </a>
 
