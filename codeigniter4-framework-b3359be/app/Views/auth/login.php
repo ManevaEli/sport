@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet"/>
+  <link href="<?= base_url('css/style.css') ?>" rel="stylesheet"/>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
 </form>
 
       <div class="auth-footer mt-4 text-center">
-        Pas encore de compte ? <a href="<?= base_url('/register') ?>">S'inscrire</a>
+        Pas encore de compte ? <a href="<?= base_url('/inscription') ?>">S'inscrire</a>
       </div>
 
     </div>

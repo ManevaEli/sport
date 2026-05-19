@@ -39,7 +39,7 @@ class Home extends BaseController
             ];
         }
 
-        return view('index', [
+        return view('public/index', [
             'creneaux' => $creneauxFormatte,
             'total'    => count($creneauxFormatte)
         ]);
@@ -70,12 +70,23 @@ class Home extends BaseController
                 'redirect' => base_url('/dashboard') // Adapte selon ta route
             ]);
         }
+        
 
         // Si ça échoue
         return $this->response->setStatusCode(401)->setJSON([
             'success' => false,
             'message' => 'Identifiants incorrects.'
         ]);
+    }
+
+    public function log()
+    {
+        return view('auth/login');
+    }
+
+       public function insc()
+    {
+        return view('auth/register');
     }
 
     public function inscription()
