@@ -16,8 +16,8 @@ $routes->get('/logout', 'Home::logout');
 $routes->get('/client', 'Home::client');
 $routes->get('/creneaux', 'Home::creneaux');
 $routes->get('/reserver/(:num)', 'Home::reserver/$1');
-$routes->get('calendar', 'Calendar::index');
-$routes->get('calendar/loadEvents', 'Calendar::loadEvents');
+$routes->get('/calendar', 'Calendar::index');
+$routes->get('/calendar/loadEvents', 'Calendar::loadEvents');
 $routes->get('/reservations', 'Home::mesReservations');
 $routes->get('/reservation/annuler/(:num)', 'Home::annulerReservation/$1');
 

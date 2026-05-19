@@ -17,6 +17,13 @@
             </a>
         </li>
 
+                <li>
+            <a href="<?= base_url('/calendar') ?>" class="<?= url_is('calendar') ? 'active' : '' ?>">
+                <i class="bi bi-calendar-event"></i>
+                Planning interactif
+            </a>
+        </li>
+
         <li>
             <a href="<?= base_url('/creneaux') ?>" class="<?= url_is('creneaux') ? 'active' : '' ?>">
                 <i class="bi bi-calendar3"></i>
